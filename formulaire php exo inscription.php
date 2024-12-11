@@ -1,6 +1,4 @@
 <?php
-
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = $_POST["nom"];
     $prenom = $_POST["prenom"];
@@ -25,7 +23,7 @@ foreach ($formulaire as $key => $element) {
     echo $key . " : " . $element . '<br>';
 }
 
-$bdd = new PDO('mysql:host=localhost;dbname=miavoudila', 'root', '');
+$bdd = new PDO('mysql:host=localhost;dbname=CRUD', 'root', '');
 
 $req = $bdd->prepare('INSERT INTO personne(nom,prenom,email,Passord,Age,Pays,Metier) VALUES(:nom,:prenom)');
 $req->execute(array(
