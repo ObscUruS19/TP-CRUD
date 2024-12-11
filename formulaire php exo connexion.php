@@ -15,9 +15,9 @@ foreach ($formulaire as $key => $element) {
     echo $key . " : " . $element . '<br>';
 }
 
-$bdd = new PDO('mysql:host=localhost;dbname=ima_biblio', 'root', '');
+$bdd = new PDO('mysql:host=localhost;dbname=crud', 'root', '');
 
 echo 'Bonjour '. $nom . ', vous venez de vous connecter. Bienvenue dans notre site';
 
-echo '<a href="http://localhost/MIAVOUDILA%20Ivann/formulaire%20php%20exo/formulaire%20php%20exo%20inscription.html">Allez vous inscrire ;)</a>';
+echo '<a href="formulaire%20php%20exo%20inscription.html"><br>Allez vous inscrire ;)</a>';
 

@@ -66,7 +66,21 @@
 
     <?php
     session_start();
-    require 'db.php';
+    // Paramètres de connexion à la base de données
+    $host = 'localhost';
+    $dbname = 'crud';
+    $username = 'root';
+    $password = '';
+
+    try {
+        // Création d'une instance PDO pour se connecter à la base de données
+        $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+        // Configuration des options de PDO pour gérer les erreurs
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        // Gestion des erreurs de connexion
+        die("Erreur de connexion à la base de données : " . $e->getMessage());
+    }
 
     // Vérifie si l'utilisateur est connecté
     if (!isset($_SESSION['user'])) {
