@@ -20,3 +20,4 @@ $bdd = new PDO('mysql:host=localhost;dbname=miavoudila', 'root', '');
 echo 'Bonjour '. $nom . ', vous venez de vous connecter. Bienvenue dans notre site';
 
 echo '<a href="http://localhost/MIAVOUDILA%20Ivann/formulaire%20php%20exo/formulaire%20php%20exo%20inscription.html">Allez vous inscrire ;)</a>';
+
