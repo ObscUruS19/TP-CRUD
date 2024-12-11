@@ -23,7 +23,7 @@ foreach ($formulaire as $key => $element) {
     echo $key . " : " . $element . '<br>';
 }
 
-$bdd = new PDO('mysql:host=localhost;dbname=CRUD', 'root', '');
+$bdd = new PDO('mysql:host=localhost;dbname=crud', 'root', '');
 
 $req = $bdd->prepare('INSERT INTO personne(nom,prenom,email,Passord,Age,Pays,Metier) VALUES(:nom,:prenom)');
 $req->execute(array(
